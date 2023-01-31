@@ -1,9 +1,7 @@
 <?php
-    if(isset($_GET['password']) && $_GET['password'] !== ''){
-        function rand_string( $length ) {
-            $pass = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-            return substr(str_shuffle($pass),0,$length);        
-        }        
+    include __DIR__. '/function.php';
+
+    if(isset($_GET['password']) && $_GET['password'] !== ''){   
         $password = rand_string($_GET['password']);
     }
 ?>
