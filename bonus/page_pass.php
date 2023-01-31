@@ -33,7 +33,7 @@
                         <div class="row">
                             <div class="col-12">
                                 <div class="info rounded-1 p-4 mt-5 text-center">
-                                    <span class="fs-5">Password generato: <?php echo $password ?></span>
+                                    <span class="fs-5">Password generata: <?php echo $password ?></span>
                                 </div>
                             </div>
                         </div>
