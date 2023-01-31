@@ -1,0 +1,19 @@
+body {
+    background-color: #001632;
+}
+
+main {
+    margin-top: 80px;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+.info {
+    background-color: #CFF4FC;
+}
