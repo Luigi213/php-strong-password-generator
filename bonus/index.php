@@ -1,9 +1,5 @@
 <?php
-    include __DIR__. '/function.php';
 
-    if(isset($_GET['password']) && $_GET['password'] !== ''){   
-        $password = rand_string($_GET['password']);
-    }
 ?>
 
 <!DOCTYPE html>
@@ -35,7 +31,7 @@
                             </div>
                             <div class="col-12 mt-2">
                                 <div class="bg-white rounded-1">
-                                    <form action="./index.php" method="GET">
+                                    <form action="./page_pass.php" method="GET">
                                         <div class="d-flex p-4">
                                             <div class="col-sm-6">
                                                 <label for="inputPassword6" class="col-form-label fs-5">lunghezza password:</label>
@@ -45,8 +41,7 @@
                                             </div>                                        
                                         </div>
                                         <div class="px-4">
-                                            <span class="fw-semibold fs-5">Password generato:</span>
-                                            <p><?php echo $password; ?></p>
+                                            <h1 class="text-danger fs-4 fw-semibold"><?php echo isset($_GET['error']) ? $_GET['error'] : '' ?></h1>
                                         </div>
                                         <div class="col-sm-12 p-4">
                                             <button type="submit" class="btn btn-primary">Invia</button>
