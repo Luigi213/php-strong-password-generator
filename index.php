@@ -1,5 +1,11 @@
 <?php
-    
+    if(isset($_GET['password']) && $_GET['password'] !== ''){
+        function rand_string( $length ) {
+            $pass = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+            return substr(str_shuffle($pass),0,$length);        
+        }        
+        $password = rand_string($_GET['password']);
+    }
 ?>
 
 <!DOCTYPE html>
@@ -39,6 +45,10 @@
                                             <div class="col-sm-3">
                                                 <input type="password" name="password" id="inputPassword6" class="form-control" placeholder="numero">
                                             </div>                                        
+                                        </div>
+                                        <div class="px-4">
+                                            <span class="fw-semibold fs-5">Password generato:</span>
+                                            <p><?php echo $password; ?></p>
                                         </div>
                                         <div class="col-sm-12 p-4">
                                             <button type="submit" class="btn btn-primary">Invia</button>
