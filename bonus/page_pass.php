@@ -1,7 +1,7 @@
 <?php 
     session_start();
     include __DIR__. '/function.php';
-    if(empty(!$_SESSION['password']) && $_GET['password'] != '' ){        
+    if(empty($_SESSION['password']) && $_GET['password'] != '' ){        
         $password = rand_string($_GET['password']);
     }
     else{
