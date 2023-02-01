@@ -25,9 +25,11 @@
                     <div class="col-8">
                         <div class="row">
                             <div class="col-12">
+                            <?php if(isset($_GET['error'])) { ?>
                                 <div class="info rounded-1 p-4">
-                                    <span class="fs-5">Nessun parametro valido inserito</span>
+                                    <span class="fs-5"><?php echo $_GET['error']; ?></span>
                                 </div>
+                            <?php } ?>
                             </div>
                             <div class="col-12 mt-2">
                                 <div class="bg-white rounded-1">
@@ -39,9 +41,6 @@
                                             <div class="col-sm-3">
                                                 <input type="password" name="password" id="inputPassword6" class="form-control" placeholder="numero">
                                             </div>                                        
-                                        </div>
-                                        <div class="px-4">
-                                            <h1 class="text-danger fs-4 fw-semibold"><?php echo isset($_GET['error']) ? $_GET['error'] : '' ?></h1>
                                         </div>
                                         <div class="col-sm-12 p-4">
                                             <button type="submit" class="btn btn-primary">Invia</button>

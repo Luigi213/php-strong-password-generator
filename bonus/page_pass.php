@@ -5,7 +5,7 @@
         $password = rand_string($_GET['password']);
     }
     else{
-        header("Location:./index.php?error=Iserire la lunghezza");
+        header("Location:./index.php?error=Nessun parametro valido inserito");
     }
 ?>
 

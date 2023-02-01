@@ -4,6 +4,9 @@
     if(isset($_GET['password']) && $_GET['password'] !== ''){   
         $password = rand_string($_GET['password']);
     }
+    elseif(isset($_GET['password']) && $_GET['password'] === ''){
+        $error ='Nessun parametro valido inserito';
+    }
 ?>
 
 <!DOCTYPE html>
@@ -29,9 +32,11 @@
                     <div class="col-8">
                         <div class="row">
                             <div class="col-12">
+                            <?php if(isset($error)) { ?>
                                 <div class="info rounded-1 p-4">
-                                    <span class="fs-5">Nessun parametro valido inserito</span>
+                                    <span class="fs-5"><?php echo $error; ?></span>
                                 </div>
+                            <?php } ?>
                             </div>
                             <div class="col-12 mt-2">
                                 <div class="bg-white rounded-1">
