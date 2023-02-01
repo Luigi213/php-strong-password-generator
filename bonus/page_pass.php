@@ -21,25 +21,25 @@
     </head>
     <body>
     <main>
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 text-center">
-                        <h1 class="fw-semibold text-secondary">Strong Password Generator</h1>
-                        <h2 class="fw-semibold text-white">Genera una password sicura</h2>
-                    </div>
-                </div>
-                <div class="row justify-content-center">      
-                    <div class="col-8">
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="info rounded-1 p-4 mt-5 text-center">
-                                    <span class="fs-5">Password generata: <?php echo $password ?></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>              
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1 class="fw-semibold text-secondary">Strong Password Generator</h1>
+                    <h2 class="fw-semibold text-white">Genera una password sicura</h2>
                 </div>
             </div>
-        </main>
+            <div class="row justify-content-center">      
+                <div class="col-8">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="info rounded-1 p-4 mt-5 text-center">
+                                <span class="fs-5">Password generata: <?php echo $password ?></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>              
+            </div>
+        </div>
+    </main>
     </body>
 </html>
